@@ -1,0 +1,18 @@
+schema_version: 1
+repository: industry-4.0-lab
+role: umbrella
+axis: application
+area: industry-4-0
+status: active
+owner: jorsacademy
+projects:
+  - dynamic-manufacturing-digital-twin-rl
+  - industrial-digital-twin-system-optimization-python
+  - industrial-maintenance-markov-decision-process-python
+  - industrial-maintenance-scheduling-optimizer
+  - predictive-maintenance-reinforcement-learning
+  - predictive-maintenance-sensor-data-optimization-python
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
