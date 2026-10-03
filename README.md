@@ -36,11 +36,18 @@ A curated portfolio of applied Industry 4.0 projects built around cyber-physical
 | 10 | Extrusion Process Monitoring | [Plastic Extrusion — Active-Line Interruption Early Warning](process-monitoring/plastic-extrusion-interruption-early-warning/) | Year-long real extrusion telemetry with 470 variables covering extruders, haul-off, winding, thickness and output | Leakage-safe 20-minute interruption-proxy ranking, frozen-threshold evaluation and drift diagnostics | Ready |
 
 
-## Candidate project backlog
+## Prototype benchmark suite
 
-A small set of non-duplicative manufacturing candidates is tracked in [`PROJECT_CANDIDATES.md`](PROJECT_CANDIDATES.md). They are deliberately **not** listed as `Ready` projects until real industrial data, traceability, leakage-safe evaluation, reproducible code, and an operational decision layer are available.
+The four non-duplicative manufacturing candidates now have a runnable synthetic benchmark suite in [`prototype-benchmarks/`](prototype-benchmarks/):
 
-The current candidates cover adaptive screwdriving, adhesive-dispensing anomaly detection, material-batch-aware setpoint adaptation, and compressed-air leak / energy-loss prioritization.
+- adaptive screwdriving from torque-angle signatures;
+- adhesive-dispensing anomaly detection;
+- material-batch-aware setpoint adaptation;
+- compressed-air leak detection and energy-loss prioritization.
+
+The suite includes deterministic data generators, future-lot / future-batch / future-time evaluation, operational baselines, model or optimization logic, CLI execution, regression tests, and GitHub Actions CI.
+
+These remain **Prototype** rather than `Ready` projects because the current fixtures are synthetic. [`PROJECT_CANDIDATES.md`](PROJECT_CANDIDATES.md) defines the real-data contracts and promotion gates required before any plant-performance claim is made.
 
 ## Advanced learning extensions
 
