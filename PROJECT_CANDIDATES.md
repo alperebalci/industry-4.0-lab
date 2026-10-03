@@ -2,7 +2,7 @@
 
 This backlog contains **candidate** projects that complement the existing Industry 4.0 Lab without duplicating projects already marked `Ready`.
 
-These are not presented as completed industrial case studies. Promotion into the main project map requires a suitable real or redistributable industrial dataset, leakage-safe evaluation, reproducible code, tests, and evidence at the physical run / lot / asset level.
+These are not presented as completed industrial case studies. A runnable synthetic implementation of all four candidates is available in [`prototype-benchmarks/`](prototype-benchmarks/). The synthetic suite validates software structure, split discipline, baselines, and decision logic; promotion into the main project map still requires a suitable real or redistributable industrial dataset and evidence at the physical run / lot / asset level.
 
 No proprietary company data, process recipes, or confidential parameter values are assumed here.
 
@@ -17,6 +17,8 @@ A candidate is retained only when it adds a distinct industrial problem class an
 - a credible path from diagnosis to parameter adjustment, inspection, maintenance, or energy action.
 
 ## 1. Adaptive screwdriving from torque-angle signatures
+
+**Prototype status.** Implemented and regression-tested in [`prototype-benchmarks/`](prototype-benchmarks/); synthetic fixture only.
 
 **Problem.** Loose joints, stripped threads, cross-threading, missing seating, and material variation can produce different torque-angle-speed signatures even when the final torque value appears acceptable.
 
@@ -52,6 +54,8 @@ Use constrained contextual optimization to recommend torque / angle / speed wind
 
 ## 2. Adhesive dispensing anomaly detection with environmental context
 
+**Prototype status.** Implemented and regression-tested in [`prototype-benchmarks/`](prototype-benchmarks/); synthetic fixture only.
+
 **Problem.** Bead gaps, unstable flow, nozzle restriction, viscosity drift, robot-path deviations, and environmental changes can create weak or incomplete bonds that are not obvious from a single pressure threshold.
 
 **Data contract.**
@@ -85,6 +89,8 @@ Build a sequence model or change-point detector for within-bead anomalies, then 
 ---
 
 ## 3. Raw-material batch shift to adaptive process setpoints
+
+**Prototype status.** Implemented and regression-tested in [`prototype-benchmarks/`](prototype-benchmarks/); synthetic fixture only.
 
 **Problem.** Steel coils, polymers, rubber compounds, coatings, and other incoming materials can vary by batch. A fixed machine recipe may therefore produce different quality outcomes even when nominal specifications are met.
 
@@ -120,6 +126,8 @@ Use constrained Bayesian optimization, contextual bandits, or robust optimizatio
 ---
 
 ## 4. Compressed-air leak detection and energy-loss prioritization
+
+**Prototype status.** Implemented and regression-tested in [`prototype-benchmarks/`](prototype-benchmarks/); synthetic fixture only.
 
 **Problem.** Compressed-air networks can lose substantial energy through leaks, but raw plant-level flow alone does not identify whether abnormal demand comes from leakage, legitimate machine operation, or schedule changes.
 

@@ -1,0 +1,36 @@
+name: Industry 4.0 prototype benchmarks
+
+on:
+  push:
+    paths:
+      - "prototype-benchmarks/**"
+      - ".github/workflows/prototype-benchmarks.yml"
+  pull_request:
+    paths:
+      - "prototype-benchmarks/**"
+      - ".github/workflows/prototype-benchmarks.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        working-directory: prototype-benchmarks
+        run: python -m pip install -e ".[dev]"
+
+      - name: Test
+        working-directory: prototype-benchmarks
+        run: pytest -q
+
+      - name: Smoke benchmark
+        working-directory: prototype-benchmarks
+        run: python -m industry4_prototypes all
