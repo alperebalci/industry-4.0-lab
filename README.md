@@ -36,6 +36,12 @@ A curated portfolio of applied Industry 4.0 projects built around cyber-physical
 | 10 | Extrusion Process Monitoring | [Plastic Extrusion — Active-Line Interruption Early Warning](process-monitoring/plastic-extrusion-interruption-early-warning/) | Year-long real extrusion telemetry with 470 variables covering extruders, haul-off, winding, thickness and output | Leakage-safe 20-minute interruption-proxy ranking, frozen-threshold evaluation and drift diagnostics | Ready |
 
 
+## Candidate project backlog
+
+A small set of non-duplicative manufacturing candidates is tracked in [`PROJECT_CANDIDATES.md`](PROJECT_CANDIDATES.md). They are deliberately **not** listed as `Ready` projects until real industrial data, traceability, leakage-safe evaluation, reproducible code, and an operational decision layer are available.
+
+The current candidates cover adaptive screwdriving, adhesive-dispensing anomaly detection, material-batch-aware setpoint adaptation, and compressed-air leak / energy-loss prioritization.
+
 ## Advanced learning extensions
 
 Two existing projects now include label- and shift-efficient learning benchmarks without creating synthetic standalone demos:
